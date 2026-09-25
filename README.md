@@ -5,8 +5,12 @@ the HID variant of the PhoenixRC adapter (VID `1781`, PID `0898`) and prints
 the raw eight-byte input report in debug mode, while feeding the values to
 vJoy.
 
-## Prerequisites
+## AI Warning
 
+This has been 100% vibe-coded. I've tested it (with a Spektrum DX8 ca. 2013) and it works well, but consider yourself warned.
+
+
+## Prerequisites
 - Install [Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/)
 	and select the **Desktop development with C++** workload. This includes the
 	MSVC C++ build tools and Windows SDK required by the project.
@@ -85,3 +89,9 @@ At each connection, calibration samples the alternating AUX channel for about
 one second. Keep AUX 2 steady and move AUX 3 through its full range when
 prompted. The lower-variation channel is assigned to AUX 2 (vJoy Slider), and
 the wider-range channel is assigned to AUX 3 (vJoy Z).
+
+
+## Acknowledgements
+
+Thanks to Marcus Folkesson, who presumably worked out how this thing worked and wrote a linux
+driver for it. It made life easier, even though I was lazy and got AI to do all the work anyway.
